@@ -24,13 +24,15 @@ class HomeCubit extends Cubit<HomeState> {
 
 
   //============== Add Students =============
+
+
   Future<void> AddStudentsToServer() async {
     emit(HomeLoading());
     try {
       await cloud.collection(CollectionName).add({
-        'Name ': nameControl.text,
-        'Age ': ageControl.text,
-        'Grade ': gradeControl.text,
+        'Name': nameControl.text,
+        'Age': ageControl.text,
+        'Grade': gradeControl.text,
       });
       emit(AddStudentSuccess());
     }
@@ -79,9 +81,9 @@ class HomeCubit extends Cubit<HomeState> {
     try {
       await cloud.collection(CollectionName).doc(id).update({
 
-        'name': nameControl.text,
-        'age': ageControl.text,
-        'grade': gradeControl.text,
+        'Name': nameControl.text,
+        'Age': ageControl.text,
+        'Grade': gradeControl.text,
       });
       emit(EditStudentSuccess());
 

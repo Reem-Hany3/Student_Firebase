@@ -119,12 +119,12 @@ class HomeContent extends StatelessWidget {
               itemBuilder: (context, index) {
                 final student = state.students[index];
                 return ListTile(
-                  title: Text("Name: ${student["name"]}"),
+                  title: Text("Name: ${student["Name"]}"),
                   subtitle: Column(
                     crossAxisAlignment: .start,
                     children: [
-                      Text("Age: ${student["age"]}"),
-                      Text("Grade: ${student["grade"]}"),
+                      Text("Age: ${student["Age"]}"),
+                      Text("Grade: ${student["Grade"]}"),
                     ],
                   ),
                   trailing: PopupMenuButton<String>(

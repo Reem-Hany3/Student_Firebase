@@ -11,9 +11,9 @@ Future<bool?> showEditDialog({
   return showDialog(
     context: context,
     builder: (dialogContext) {
-      cubit.nameControl.text = student["name"];
-      cubit.ageControl.text = student["age"];
-      cubit.gradeControl.text = student["grade"];
+      cubit.nameControl.text = student["Name"];
+      cubit.ageControl.text = student["Age"];
+      cubit.gradeControl.text = student["Grade"];
 
       return AlertDialog(
         title: Text("Edit Student"),
